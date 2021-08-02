@@ -70,9 +70,11 @@ def authenticate(email,pw):
                 
     data = {
         "identity": email,
-        "credential": pw,
-        "captcha" : captcha_text
+        "credential": pw
     }
+    
+    if captcha:
+        data["captcha"]=captcha_text
     
     tree=html.fromstring(r.content)
     for i in tree.xpath('//input'):
