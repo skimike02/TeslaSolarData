@@ -1,0 +1,5 @@
+creds.zip
+solar_data.zip
+*.pyc
+captcha.svg
+config.py
